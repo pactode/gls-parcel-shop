@@ -16,8 +16,6 @@ abstract class Resource
 
     /**
      * Create a new Resource instance.
-     *
-     * @param array $data
      */
     public function __construct(array $data)
     {
@@ -27,7 +25,6 @@ abstract class Resource
     /**
      * Get data for the resource by the provided key.
      *
-     * @param  string $key
      * @return mixed
      */
     public function getData(string $key)

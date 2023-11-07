@@ -8,8 +8,6 @@ class ParcelShop extends Resource
 {
     /**
      * Get the city name.
-     *
-     * @return string
      */
     public function city(): string
     {
@@ -18,8 +16,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the company name.
-     *
-     * @return string
      */
     public function company(): string
     {
@@ -28,8 +24,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the country code (ISO-3166-A format).
-     *
-     * @return string
      */
     public function countryCode(): string
     {
@@ -38,8 +32,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the distance in meters.
-     *
-     * @return int
      */
     public function distance(): int
     {
@@ -48,8 +40,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the distance in kilometers.
-     *
-     * @return float
      */
     public function distanceInKm(): float
     {
@@ -58,8 +48,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the latitude.
-     *
-     * @return float
      */
     public function latitude(): float
     {
@@ -68,8 +56,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the longitude.
-     *
-     * @return float
      */
     public function longitude(): float
     {
@@ -78,8 +64,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the unique parcel shop number.
-     *
-     * @return string
      */
     public function number(): string
     {
@@ -88,8 +72,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the opening hours.
-     *
-     * @return \Illuminate\Support\Collection
      */
     public function openingHours(): Collection
     {
@@ -101,8 +83,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the street name.
-     *
-     * @return string
      */
     public function streetName(): string
     {
@@ -111,8 +91,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the street name 2.
-     *
-     * @return string
      */
     public function streetName2(): string
     {
@@ -121,8 +99,6 @@ class ParcelShop extends Resource
 
     /**
      * Get the zip code.
-     *
-     * @return string
      */
     public function zipCode(): string
     {

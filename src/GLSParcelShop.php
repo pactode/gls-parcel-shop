@@ -18,8 +18,6 @@ class GLSParcelShop implements Contract
 
     /**
      * Create a new GLSParcelShop instance.
-     *
-     * @param \Laminas\Soap\Client $client
      */
     public function __construct(Client $client)
     {
@@ -28,11 +26,8 @@ class GLSParcelShop implements Contract
 
     /**
      * Instantiate using only an endpoint.
-     *
-     * @param  string|null $endpoint
-     * @return self
      */
-    public static function make(?string $endpoint = null): self
+    public static function make(string $endpoint = null): self
     {
         $client = new Client($endpoint ?? 'http://www.gls.dk/webservices_v4/wsShopFinder.asmx?WSDL', [
             'connection_timeout' => 60,
@@ -44,9 +39,6 @@ class GLSParcelShop implements Contract
 
     /**
      * Retrieve all parcel shops for a specific country.
-     *
-     * @param  string $countryCode
-     * @return \Illuminate\Support\Collection
      */
     public function all(string $countryCode): Collection
     {
@@ -62,8 +54,7 @@ class GLSParcelShop implements Contract
     /**
      * Find a given parcel shop by its number.
      *
-     * @param  string|int $shopNumber
-     * @return ParcelShop
+     * @param  string|int  $shopNumber
      */
     public function find($shopNumber): ParcelShop
     {
@@ -76,12 +67,6 @@ class GLSParcelShop implements Contract
 
     /**
      * Retrieve parcel shops near an address.
-     *
-     * @param  string      $streetName
-     * @param  string      $zipCode
-     * @param  string      $countryCode
-     * @param  int $amount
-     * @return \Illuminate\Support\Collection
      */
     public function nearest(
         string $streetName,
@@ -103,10 +88,6 @@ class GLSParcelShop implements Contract
 
     /**
      * Retrieve parcel shops within a given zip code and country code.
-     *
-     * @param  string $zipCode
-     * @param  string $countryCode
-     * @return \Illuminate\Support\Collection
      */
     public function within(string $zipCode, string $countryCode): Collection
     {

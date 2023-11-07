@@ -6,8 +6,6 @@ class OpeningHour extends Resource
 {
     /**
      * Get the day.
-     *
-     * @return string
      */
     public function day(): string
     {
@@ -16,8 +14,6 @@ class OpeningHour extends Resource
 
     /**
      * Get the from time.
-     *
-     * @return string
      */
     public function from(): string
     {
@@ -26,8 +22,6 @@ class OpeningHour extends Resource
 
     /**
      * Get the to time.
-     *
-     * @return string
      */
     public function to(): string
     {
