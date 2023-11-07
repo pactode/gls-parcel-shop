@@ -1,9 +1,9 @@
 <?php
 
-namespace Signifly\ParcelShop;
+namespace Pactode\ParcelShop;
 
 use Illuminate\Support\ServiceProvider;
-use Signifly\ParcelShop\Contracts\ParcelShop;
+use Pactode\ParcelShop\Contracts\ParcelShop;
 
 class ParcelShopServiceProvider extends ServiceProvider
 {

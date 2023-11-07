@@ -1,12 +1,12 @@
 # GLS Parcel Shop
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/signifly/gls-parcel-shop.svg?style=flat-square)](https://packagist.org/packages/signifly/gls-parcel-shop)
-[![Build Status](https://img.shields.io/travis/signifly/gls-parcel-shop/master.svg?style=flat-square)](https://travis-ci.org/signifly/gls-parcel-shop)
-[![StyleCI](https://styleci.io/repos/218710533/shield?branch=master)](https://styleci.io/repos/218710533)
-[![Quality Score](https://img.shields.io/scrutinizer/g/signifly/gls-parcel-shop.svg?style=flat-square)](https://scrutinizer-ci.com/g/signifly/gls-parcel-shop)
-[![Total Downloads](https://img.shields.io/packagist/dt/signifly/gls-parcel-shop.svg?style=flat-square)](https://packagist.org/packages/signifly/gls-parcel-shop)
 
-The `signifly/gls-parcel-shop` package is a simple wrapper for the GLS Parcel Shop Webservice written in PHP with a service provider for Laravel.
+<a href="https://github.com/pactode/gls-parcel-shop/actions"><img alt="GitHub Workflow Status (main)" src="https://img.shields.io/github/actions/workflow/status/pactode/gls-parcel-shop/tests.yml?branch=main&label=tests&style=round-square"></a>
+<a href="https://packagist.org/packages/pactode/gls-parcel-shop"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/pactode/gls-parcel-shop"></a>
+<a href="https://packagist.org/packages/pactode/gls-parcel-shop"><img alt="Latest Version" src="https://img.shields.io/packagist/v/pactode/gls-parcel-shop"></a>
+<a href="https://packagist.org/packages/pactode/gls-parcel-shop"><img alt="License" src="https://img.shields.io/github/license/pactode/gls-parcel-shop"></a>
+
+The `pactode/gls-parcel-shop` package is a simple wrapper for the GLS Parcel Shop Webservice written in PHP with a service provider for Laravel.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,7 +17,7 @@ The `signifly/gls-parcel-shop` package is a simple wrapper for the GLS Parcel Sh
 You can install the package via composer:
 
 ```bash
-composer require signifly/gls-parcel-shop
+composer require pactode/gls-parcel-shop
 ```
 
 The package will automatically register itself.
@@ -48,7 +48,7 @@ $client = GLSParcelShop::make('http://www.gls.dk/webservices_v4/wsShopFinder.asm
 **Resolving it from the Laravel Service Container**
 
 ```php
-use Signifly\ParcelShop\Contracts\ParcelShop;
+use Pactode\ParcelShop\Contracts\ParcelShop;
 
 $client = app(ParcelShop::class);
 ```
@@ -59,12 +59,12 @@ $client = app(ParcelShop::class);
 $client->all('DK'); // returns Illuminate\Support\Collection
 ```
 
-This request returns a collection of `Signifly\ParcelShop\Resources\ParcelShop` resources.
+This request returns a collection of `Pactode\ParcelShop\Resources\ParcelShop` resources.
 
 **Find a specific parcel shop**
 
 ```php
-$parcelShop = $client->find(12345); // returns Signifly\ParcelShop\Resources\ParcelShop
+$parcelShop = $client->find(12345); // returns Pactode\ParcelShop\Resources\ParcelShop
 
 // The following getters are available for ParcelShop:
 $parcelShop->number();
@@ -94,13 +94,13 @@ $openingHour->to(); // 20:00
 ```php
 // Params: Street, Zip Code, Country Code, Amount (optional, default to 5)
 
-$client->nearest('Vesterbrogade 44', '1620', 'DK', 10); // returns Illuminate\Support\Collection
+$client->nearest('Amaliegade 16', '1256', 'DK', 10); // returns Illuminate\Support\Collection
 ```
 
 **Find parcel shops within a zip code**
 
 ```php
-$client->within('1620', 'DK'); // returns Illuminate\Support\Collection
+$client->within('1256', 'DK'); // returns Illuminate\Support\Collection
 ```
 
 ## Testing
@@ -111,7 +111,7 @@ composer test
 
 ## Security
 
-If you discover any security issues, please email dev@signifly.com instead of using the issue tracker.
+If you discover any security issues, please email dev@pactode.com instead of using the issue tracker.
 
 ## Credits
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Signifly\ParcelShop\Contracts;
+namespace Pactode\ParcelShop\Contracts;
 
 use Illuminate\Support\Collection;
-use Signifly\ParcelShop\Resources\ParcelShop as ParcelShopResource;
+use Pactode\ParcelShop\Resources\ParcelShop as ParcelShopResource;
 
 interface ParcelShop
 {

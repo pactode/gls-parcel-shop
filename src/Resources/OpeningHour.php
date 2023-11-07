@@ -1,6 +1,6 @@
 <?php
 
-namespace Signifly\ParcelShop\Resources;
+namespace Pactode\ParcelShop\Resources;
 
 class OpeningHour extends Resource
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Signifly\ParcelShop;
+namespace Pactode\ParcelShop;
 
 use Illuminate\Support\Collection;
 use Laminas\Soap\Client;
-use Signifly\ParcelShop\Contracts\ParcelShop as Contract;
-use Signifly\ParcelShop\Resources\ParcelShop;
+use Pactode\ParcelShop\Contracts\ParcelShop as Contract;
+use Pactode\ParcelShop\Resources\ParcelShop;
 
 class GLSParcelShop implements Contract
 {

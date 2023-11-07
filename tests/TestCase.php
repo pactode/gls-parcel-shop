@@ -1,9 +1,9 @@
 <?php
 
-namespace Signifly\ParcelShop\Tests;
+namespace Pactode\ParcelShop\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Signifly\ParcelShop\ParcelShopServiceProvider;
+use Pactode\ParcelShop\ParcelShopServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

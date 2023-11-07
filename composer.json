@@ -1,44 +1,48 @@
 {
-    "name": "signifly/gls-parcel-shop",
+    "name": "pactode/gls-parcel-shop",
     "description": "A simple wrapper for GLS Parcel Shop Webservice",
-    "homepage": "https://github.com/signifly/gls-parcel-shop",
+    "homepage": "https://github.com/pactode/gls-parcel-shop",
     "license": "MIT",
     "authors": [
         {
             "name": "Morten Poul Jensen",
-            "email": "mpj@signifly.com",
+            "email": "mpj@foreno.dk",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.2.5|^8.0",
-        "illuminate/support": "^6.0|^7.0|^8.0",
-        "laminas/laminas-soap": "^2.8"
+        "php": "^8.0",
+        "illuminate/support": "^10.0",
+        "laminas/laminas-soap": "^2.13"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0|^5.0|^6.0",
-        "phpunit/phpunit": "^7.5|^8.0|^9.0"
+        "laravel/pint": "^1.10",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^1.23"
     },
     "autoload": {
         "psr-4": {
-            "Signifly\\ParcelShop\\": "src"
+            "Pactode\\ParcelShop\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Signifly\\ParcelShop\\Tests\\": "tests/"
+            "Pactode\\ParcelShop\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/pest -v"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Signifly\\ParcelShop\\ParcelShopServiceProvider"
+                "Pactode\\ParcelShop\\ParcelShopServiceProvider"
             ]
         }
     }
